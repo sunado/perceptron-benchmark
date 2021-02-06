@@ -92,6 +92,7 @@ Perceptron Robustness Benchmark would not have been possible without the `foolbo
 You are welcome to send pull requests and report issues on GitHub or iCode. Note that the Perceptron Benchmark project follows the Git flow development model.
 
 ## Authors
+* Zhisheng Hu (<zhishenghu@baidu.com>)
 * Yunhan Jia [@yunhan](https://github.com/jiayunhan)
 * Yantao Lu (<yantaolu@baidu.com>)
 * Xiaowei Chen (<xiaoweichen01@baidu.com>)
@@ -100,7 +101,9 @@ You are welcome to send pull requests and report issues on GitHub or iCode. Note
 
 ## Steering Committee
 
-  - Tao Wei (<lenx@baidu.com>)
+  - Kang Li (<kangli01@baidu.com>)
+  - Tao Wei 
+
 
 ## License
 Perceptron Robustness Benchmark is provided under Apache-2.0 license. For a copy, see [LICENSE](LICENSE) file. 
