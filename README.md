@@ -93,6 +93,7 @@ You are welcome to send pull requests and report issues on GitHub or iCode. Note
 
 ## Authors
 * Zhisheng Hu (<zhishenghu@baidu.com>)
+* Zhenyu Zhong (edward.zhenyu@gmail.com)
 * Yunhan Jia [@yunhan](https://github.com/jiayunhan)
 * Yantao Lu (<yantaolu@baidu.com>)
 * Xiaowei Chen (<xiaoweichen01@baidu.com>)
