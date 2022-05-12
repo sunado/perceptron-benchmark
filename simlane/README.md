@@ -56,11 +56,8 @@ This first release of the SimLane dataset covers the following nine risky enviro
 
 The below video shows one road wetness clip that causes an Openpilot agent (in simulation mode) to deviate from its lane and crash into a truck in the right lane.
 
-https://user-images.githubusercontent.com/9076986/162335203-d71005c3-d727-49c4-a1ba-1f5805b75351.mp4
+![cut](https://user-images.githubusercontent.com/35244926/167974727-9d778137-4de4-483f-925c-dfd14f20a48a.gif)
 
-
-
-https://user-images.githubusercontent.com/35244926/167974373-ae26efab-07ce-4c5e-a162-60bbd017d2d3.mp4
 
 
 
