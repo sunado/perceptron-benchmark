@@ -58,6 +58,7 @@ The below video shows one road wetness clip that causes an Openpilot agent (in s
 
 https://user-images.githubusercontent.com/9076986/162335203-d71005c3-d727-49c4-a1ba-1f5805b75351.mp4
 
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
 ## Some Differences with Existing Datasets
 
 1. The view direction of the camera is very close to the driving direction；
