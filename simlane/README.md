@@ -73,7 +73,7 @@ It would be great to cite our research article if SimLane dataset helps you proj
 
 @inproceedings{
 simlanedsn22,
-title={imLane: A Risk-Orientated Benchmark for Lane Detection},
+title={SimLane: A Risk-Orientated Benchmark for Lane Detection},
 author={Xinyang Zhang and Zhisheng Hu and Shengjian Guo and Zhenyu Zhong and Kang Li},
 booktitle={The 52nd Annual IEEE/IFIP International Conference on Dependable Systems and Networks - Industry Track},
 year={2022},
