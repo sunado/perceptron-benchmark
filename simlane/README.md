@@ -2,9 +2,9 @@
 
 ## Link
 
-Data Files (list and images): [https://simlane.s3.amazonaws.com/simlane_data_list.zip](https://simlane.s3.amazonaws.com/simlane_data_list.zip)
+Data Files (list and images): [https://meiyan.cdn.bcebos.com/simlane/simlane_data_list.zip](https://meiyan.cdn.bcebos.com/simlane/simlane_data_list.zip)
 
-Test Labels: [https://simlane.s3.amazonaws.com/simlane_test_label.zip](https://simlane.s3.amazonaws.com/simlane_test_label.zip)
+Test Labels: [https://meiyan.cdn.bcebos.com/simlane/simlane_test_label.zip](https://meiyan.cdn.bcebos.com/simlane/simlane_test_label.zip)
 
 ## Description
 
