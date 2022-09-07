@@ -249,7 +249,7 @@ def clear_keras_session():
     sess = tf.compat.v1.Session()
     K.set_session(sess)
     K.clear_session()
-    tf.reset_default_graph()
+    tf.compat.v1.reset_default_graph()
     del sess
 
 

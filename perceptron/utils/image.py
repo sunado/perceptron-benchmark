@@ -275,10 +275,8 @@ def draw_letterbox(image, prediction, original_shape=(416, 416), class_names=[],
     new_image = np.asarray(image_pil, dtype=np.float32)
     new_image /= 255.
 
-    if 'predictions' in locals():
-        if predictions == None:
-            return new_image
-    else:
+
+    if prediction == None:
         return new_image
 
     for idx, temp_bbox in enumerate(prediction['boxes']):

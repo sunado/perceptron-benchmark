@@ -322,7 +322,7 @@ def plot_image_objectdetection(adversary, kmodel, bounds=(0, 1), title=None, fig
     adv_image = draw_letterbox(adversary.image, pred_adv, class_names=class_names, bounds=bounds)
 
     import matplotlib.pyplot as plt
-    fig, (ax1, ax2) = plt.subplots(1, 2)
+    fig, (ax1, ax2, ax3 ) = plt.subplots(1, 3)
     plt.axis('off')
 
     ax1.imshow(ori_image)
@@ -333,8 +333,27 @@ def plot_image_objectdetection(adversary, kmodel, bounds=(0, 1), title=None, fig
     ax2.set_title('Adversary')
     ax2.axis('off')
 
+    import numpy as np
+    prev = adversary.original_image
+    after = adversary.image
+    if adversary.original_image.shape[0] == 3 :
+        prev = np.transpose(adversary.original_image, (1, 2, 0))
+        after = np.transpose(adversary.image, (1, 2, 0))
+
+    max_value = 255 if prev.max() > 1 else 1
+    diff = np.absolute(prev - after)
+    scale = max_value / diff.max()
+    diff = diff * scale
+
+    if max_value == 255:
+        diff = diff.astype('uint8')
+
+    ax3.imshow(diff)
+    ax3.set_title('Diff * %.1f' % scale)
+    ax3.axis('off')
+
     if title :
-        fig.suptitle(title, fontsize=12, fontweight='bold', y=0.9)
+        fig.suptitle(title, fontsize=12, fontweight='bold', y=0.8)
 
     # in case you do not have GUI interface
     plt.savefig(figname, bbox_inches='tight', dpi=1000)
