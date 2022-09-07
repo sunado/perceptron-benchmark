@@ -308,7 +308,7 @@ class KerasYOLOv3Model(DifferentiableModel):
 
         # Avoid the propagation of nan
         return tf.cond(
-            tf.is_nan(loss_box_class_conf),
+            tf.math.is_nan(loss_box_class_conf),
             lambda: tf.constant(0.),
             lambda: loss_box_class_conf)
 
@@ -461,9 +461,9 @@ class KerasYOLOv3Model(DifferentiableModel):
 
         # Adjust preditions to each spatial grid point and anchor size.
         box_xy = (K.sigmoid(feats[..., :2]) + grid) /\
-            K.cast(grid_shape[::-1], K.dtype(feats))
+            K.cast(grid_shape[...,::-1], K.dtype(feats))
         box_wh = K.exp(feats[..., 2:4]) * anchors_tensor /\
-            K.cast(input_shape[::-1], K.dtype(feats))
+            K.cast(input_shape[...,::-1], K.dtype(feats))
         box_confidence = K.sigmoid(feats[..., 4:5])
         box_class_probs = K.sigmoid(feats[..., 5:])
 

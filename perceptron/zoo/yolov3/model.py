@@ -12,8 +12,8 @@ from keras.layers import ZeroPadding2D
 from keras.layers import UpSampling2D
 from keras.layers import Concatenate
 from keras.layers import MaxPooling2D
-from keras.layers.advanced_activations import LeakyReLU
-from keras.layers.normalization import BatchNormalization
+from keras.layers import LeakyReLU
+from keras.layers import BatchNormalization
 from keras.models import Model
 from keras.layers import Input
 from keras.regularizers import l2

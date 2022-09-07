@@ -200,12 +200,14 @@ def maybe_download_model_data(file_name, url_string):
     data_dir = tempfile.gettempdir()
     dest_file = os.path.join(data_dir, file_name)
     isfile = os.path.isfile(dest_file)
+    print('Checking %s' % dest_file) 
     if not isfile:
         url = urljoin(
             url_string,
             file_name)
-        print('Downloading %s' % file_name)
-
+        print('Downloading %s' % url)
+        print('Downloading %s' % file_name) 
+        
         def dlProgress(count, block_size, total_size):
             percent = int(count * block_size * 100 / total_size)
             sys.stdout.write("\r" + url + "...%d%%" % percent)
@@ -244,7 +246,7 @@ def clear_keras_session():
     from keras import backend as K
     import tensorflow as tf
     default_sess = K.get_session()
-    sess = tf.Session()
+    sess = tf.compat.v1.Session()
     K.set_session(sess)
     K.clear_session()
     tf.reset_default_graph()

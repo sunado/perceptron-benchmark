@@ -1,8 +1,8 @@
 from __future__ import division
 import numpy as np
 import keras.backend as K
-from keras.engine.topology import InputSpec
-from keras.engine.topology import Layer
+from tensorflow.keras.layers import InputSpec
+from tensorflow.keras.layers import Layer
 
 from perceptron.zoo.ssd_300.layers_loss_bbox.bounding_box_utils import convert_coordinates
 
@@ -197,14 +197,14 @@ class AnchorBoxes(Layer):
         wh_list = np.array(wh_list)
 
         # We need the shape of the input tensor
-        if K.image_dim_ordering() == 'tf':
+        if K.image_data_format() == 'channels_last':
             batch_size, feature_map_height, feature_map_width, \
-                feature_map_channels = x._keras_shape
+                feature_map_channels = x.shape
         else:  # Not yet relevant since TensorFlow is the only supported 
                # backend right now, but it can't harm to have this in 
                # here for the future
             batch_size, feature_map_channels, feature_map_height, \
-                feature_map_width = x._keras_shape
+                feature_map_width = x.shape
 
         # Compute the grid of box center points. They are identical for all
         # aspect ratios.

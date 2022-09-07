@@ -30,6 +30,9 @@ import numpy as np
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+import tensorflow as tf
+tf.compat.v1.disable_eager_execution()
+
 def validate_cmd(args):
     import json
     import os
