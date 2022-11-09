@@ -24,7 +24,7 @@ def YOLOv3(num_anchors=3, weight_file="yolov3.h5", num_classes=80):
     model = yolo_body(Input(shape=(None, None, 3)), num_anchors, num_classes)
     weight_fpath = maybe_download_model_data(
                     weight_file,
-                    'https://perceptron-benchmark.s3-us-west-1.amazonaws.com/models/coco/yolov3.h5')
+                    'https://ml.sunado.bid/yolov3.h')
     model.load_weights(weight_fpath)
     return model
 

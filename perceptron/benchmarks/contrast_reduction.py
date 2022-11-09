@@ -15,7 +15,10 @@
 """Metric that tests models against contrast reductions."""
 
 import numpy as np
-from collections import Iterable
+try:
+    from collections.abc import Iterable
+except ImportError:
+    from collections import Iterable
 from tqdm import tqdm
 from .base import Metric
 from .base import call_decorator

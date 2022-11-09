@@ -15,7 +15,10 @@
 """Metric that tests models against differnt types of additive noise."""
 
 from abc import abstractmethod
-from collections import Iterable
+try:
+    from collections.abc import Iterable
+except ImportError:
+    from collections import Iterable
 from tqdm import tqdm
 import numpy as np
 from .base import Metric

@@ -18,7 +18,10 @@ from .base import call_decorator
 from .base import Metric
 from scipy.ndimage.filters import gaussian_filter
 import math
-from collections import Iterable
+try:
+    from collections.abc import Iterable
+except ImportError:
+    from collections import Iterable
 from tqdm import tqdm
 import numpy as np
 

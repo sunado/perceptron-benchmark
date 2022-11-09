@@ -16,7 +16,10 @@
 
 import numpy as np
 from tqdm import tqdm
-from collections import Iterable
+try:
+    from collections.abc import Iterable
+except ImportError:
+    from collections import Iterable
 from .base import Metric
 from .base import call_decorator
 from perceptron.utils.rngs import nprng

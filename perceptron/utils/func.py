@@ -208,11 +208,15 @@ def maybe_download_model_data(file_name, url_string):
         print('Downloading %s' % url)
         print('Downloading %s' % file_name) 
         
-        def dlProgress(count, block_size, total_size):
-            percent = int(count * block_size * 100 / total_size)
-            sys.stdout.write("\r" + url + "...%d%%" % percent)
-            sys.stdout.flush()
-        urlretrieve(url, dest_file, reporthook=dlProgress)
+        # def dlProgress(count, block_size, total_size):
+        #     percent = int(count * block_size * 100 / total_size)
+        #     sys.stdout.write("\r" + url + "...%d%%" % percent)
+        #     sys.stdout.flush()
+        # urlretrieve(url, dest_file, reporthook=dlProgress)
+        import requests
+        r = requests.get(url)
+        with open(dest_file, 'wb') as outfile:
+            outfile.write(r.content)
     return dest_file
 
 
@@ -232,11 +236,16 @@ def maybe_download_image(file_name, url_string):
             file_name)
         print('Downloading %s' % file_name)
 
-        def dlProgress(count, block_size, total_size):
-            percent = int(count * block_size * 100 / total_size)
-            sys.stdout.write("\r" + url + "...%d%%" % percent)
-            sys.stdout.flush()
-        urlretrieve(url, dest_file, reporthook=dlProgress)
+        # def dlProgress(count, block_size, total_size):
+        #     percent = int(count * block_size * 100 / total_size)
+        #     sys.stdout.write("\r" + url + "...%d%%" % percent)
+        #     sys.stdout.flush()
+        # urlretrieve(url, dest_file, reporthook=dlProgress)
+
+        import requests
+        r = requests.get(url)
+        with open(dest_file, 'wb') as outfile:
+            outfile.write(r.content)
     return dest_file
 
 
